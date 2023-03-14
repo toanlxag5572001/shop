@@ -11,18 +11,18 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import vip.shop.databinding.ItemCategoryBinding;
 import vip.shop.listener.CateroryListener;
 import vip.shop.model.Category;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyViewHolder>{
     List<Category> list;
-    private CateroryListener listener;
 
-    public CategoryAdapter(List<Category> list, CateroryListener listener) {
-
+    public CategoryAdapter(List<Category> list) {
         this.list = list;
-        this.listener = listener;
     }
+//    private CateroryListener listener;
+
 
     @NonNull
     @Override
@@ -34,12 +34,12 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.setBinding(list.get(position));
-        Glide.with(holder.itemView).load(list.get(position).getHinhdanhmuc().into(holder.binding.imageCate);
+        Glide.with(holder.itemView).load(list.get(position).getHinhdanhmuc()).into(holder.binding.imageCate);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return list.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -51,6 +51,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
         }
 
         public void setBinding(Category category) {
+            //ben item_cate ten gi thi dat ten do
             binding.setCategory(category);
 
         }

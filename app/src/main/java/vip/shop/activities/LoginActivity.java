@@ -1,9 +1,10 @@
-package vip.shop;
+package vip.shop.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.DataBindingUtil;
 
+import vip.shop.R;
 import vip.shop.databinding.ActivityLoginBinding;
 import vip.shop.databinding.ActivityMainBinding;
 import android.os.Bundle;

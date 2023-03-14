@@ -3,16 +3,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:fillViewport="true">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -35,15 +35,14 @@
                     android:adjustViewBounds="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/kisspng_green_wallpaper_green_background_transparent_background_5a71ec3fec90a1_580357721517415487969"
-
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
                     android:id="@+id/esearch"
                     android:layout_width="264dp"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:background="@drawable/back_edit"
                     android:drawableLeft="@drawable/ic_search"
                     android:drawablePadding="@dimen/_5sdp"
@@ -60,6 +59,7 @@
                     android:src="@drawable/giohang"
                     app:layout_constraintBottom_toTopOf="@+id/name"
                     app:layout_constraintLeft_toRightOf="@id/esearch"
+                    app:layout_constraintRight_toLeftOf="@id/login"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.078" />
 
@@ -73,6 +73,7 @@
                     app:layout_constraintBottom_toTopOf="@+id/name"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/giohang"
+                    app:layout_constraintRight_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.078" />
 
