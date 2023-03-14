@@ -48,15 +48,42 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView" />
 
+        <TextView
+            android:id="@+id/loginwith"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:text="Hoặc đăng nhập bằng:"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttondangnhap" />
+
         <Button
+            android:id="@+id/buttondangnhap"
             android:layout_width="@dimen/_90sdp"
             android:layout_height="@dimen/_40sdp"
             android:backgroundTint="@color/teal_700"
             android:text="Đăng Nhập"
             android:textSize="@dimen/_10sdp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttondangki"
+            app:layout_constraintHorizontal_bias="0.761"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/matkhau" />
+
+        <Button
+            android:id="@+id/buttondangki"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="72dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="Đăng Kí"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/matkhau" />
 
         <EditText
@@ -88,17 +115,34 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/taikhoan" />
-<!--ẩn hiện pass link demo https://www.youtube.com/watch?v=vxnjJJkFPCI-->
-<!--        <ImageView-->
-<!--            android:id="@+id/show_hidepass"-->
-<!--            android:layout_width="30dp"-->
-<!--            android:layout_height="32dp"-->
-<!--            android:layout_below="@id/matkhau"-->
-<!--            tools:layout_editor_absoluteX="308dp"-->
-<!--            tools:layout_editor_absoluteY="147dp">-->
+        <!--ẩn hiện pass link demo https://www.youtube.com/watch?v=vxnjJJkFPCI-->
+        <!--        <ImageView-->
+        <!--            android:id="@+id/show_hidepass"-->
+        <!--            android:layout_width="30dp"-->
+        <!--            android:layout_height="32dp"-->
+        <!--            android:layout_below="@id/matkhau"-->
+        <!--            tools:layout_editor_absoluteX="308dp"-->
+        <!--            tools:layout_editor_absoluteY="147dp">-->
 
-<!--        </ImageView>-->
+        <ImageView
+            android:id="@+id/logofb"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/logofb"
+            app:layout_constraintEnd_toStartOf="@+id/logogg"
+            app:layout_constraintHorizontal_bias="0.727"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginwith" />
 
+        <ImageView
+            android:id="@+id/logogg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="276dp"
+            android:src="@drawable/logogg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginwith" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
