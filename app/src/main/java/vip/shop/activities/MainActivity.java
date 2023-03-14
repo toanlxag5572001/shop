@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity  {
                 binding.rcCategory.setAdapter(adapter);
             }
         });
+
     }
 
 }

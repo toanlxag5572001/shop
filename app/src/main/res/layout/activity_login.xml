@@ -10,8 +10,94 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="420dp"
+            android:layout_height="270dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/image_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:layout_width="420dp"
+            android:layout_height="270dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/kisspng_green_wallpaper_green_background_transparent_background_5a71ec3fec90a1_580357721517415487969"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="2dp"
+            android:text="Đăng Nhập"
+            android:textColor="@color/green"
+            android:textSize="@dimen/_25sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/taikhoan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <Button
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:backgroundTint="@color/teal_700"
+            android:text="Đăng Nhập"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/matkhau" />
+
+        <EditText
+            android:id="@+id/taikhoan"
+            android:layout_width="264dp"
+            android:layout_height="32dp"
+
+            android:background="@drawable/back_edit"
+            android:drawableLeft="@drawable/taikhoan"
+            android:drawablePadding="@dimen/_5sdp"
+            android:hint="Tài khoản"
+            app:layout_constraintBottom_toTopOf="@+id/matkhau"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/matkhau"
+            android:layout_width="264dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back_edit"
+            android:drawableLeft="@drawable/password"
+            android:drawablePadding="@dimen/_5sdp"
+            android:hint="Mật Khẩu"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/taikhoan" />
+<!--ẩn hiện pass link demo https://www.youtube.com/watch?v=vxnjJJkFPCI-->
+<!--        <ImageView-->
+<!--            android:id="@+id/show_hidepass"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="32dp"-->
+<!--            android:layout_below="@id/matkhau"-->
+<!--            tools:layout_editor_absoluteX="308dp"-->
+<!--            tools:layout_editor_absoluteY="147dp">-->
+
+<!--        </ImageView>-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
