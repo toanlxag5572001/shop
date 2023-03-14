@@ -50,32 +50,31 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-
-                <ImageView
-                    android:id="@+id/giohang"
-                    android:layout_width="@dimen/_30sdp"
-                    android:layout_height="@dimen/_30sdp"
-                    android:layout_marginLeft="44dp"
-                    android:src="@drawable/giohang"
-                    app:layout_constraintBottom_toTopOf="@+id/name"
+                <LinearLayout
+                    android:weightSum="4"
                     app:layout_constraintLeft_toRightOf="@id/esearch"
-                    app:layout_constraintRight_toLeftOf="@id/login"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.078" />
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:orientation="horizontal"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/login"
-                    android:layout_width="@dimen/_30sdp"
-                    android:layout_height="@dimen/_30sdp"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:layout_marginEnd="16dp"
-                    android:src="@drawable/taikhoan"
-                    app:layout_constraintBottom_toTopOf="@+id/name"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/giohang"
-                    app:layout_constraintRight_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.078" />
+                    <ImageView
+                        android:layout_weight="2"
+                        android:id="@+id/giohang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/giohang" />
+
+                    <ImageView
+                        android:layout_weight="2"
+                        android:id="@+id/login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/taikhoan" />
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/name"
